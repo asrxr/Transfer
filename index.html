@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#0A100D" />
+  <title>The Transfer Room</title>
+  <meta name="description" content="A fantasy football transfer-market party game. Spot the rising star before anyone knows the name." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="root"><div id="boot">Loading the scouting room…</div></div>
+  <noscript style="color:#EAF2EC;font-family:sans-serif;padding:24px;display:block">This game needs JavaScript enabled.</noscript>
+
+  <!-- React from CDN (only external dependency) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- player data, then the pre-compiled app (no in-browser Babel needed) -->
+  <script src="players.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

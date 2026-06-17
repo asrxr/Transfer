@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body, #root { margin: 0; background: #0A100D; }
+#boot { min-height: 100vh; display: grid; place-items: center; color: #8AA293;
+  font-family: system-ui, sans-serif; font-size: 14px; letter-spacing: 1px; }
+.spin { animation: spin 1s linear infinite; }
+
+.wrap { max-width: 760px; margin: 0 auto;
+  padding: max(14px, env(safe-area-inset-top)) 16px calc(40px + env(safe-area-inset-bottom)); }
+
+.cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.players { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@media (min-width: 560px) { .cards { grid-template-columns: 1fr 1fr; } .players { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 880px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
+
+.dossier { transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease; }
+@media (hover: hover) { .dossier:hover { transform: translateY(-2px); border-color: #3a5546; } }
+
+.cta { transition: filter .15s ease, transform .15s ease; }
+.cta:active:not(:disabled) { transform: translateY(1px); }
+@media (hover: hover) { .cta:hover:not(:disabled) { filter: brightness(1.07); } }
+
+.ghost { transition: all .15s ease; }
+@media (hover: hover) { .ghost:hover { color: #EAF2EC !important; border-color: #3a5546 !important; } }
+@media (hover: hover) { .sellBtn:hover { background: #FF6B6B !important; color: #0A100D !important; } }
+
+.actionbar { position: sticky; bottom: 10px; z-index: 20; display: flex; align-items: center; gap: 10px;
+  margin-top: 18px; padding: 11px 12px 11px 16px; border-radius: 14px;
+  background: rgba(16, 24, 20, .92); backdrop-filter: blur(10px); border: 1px solid #26392F;
+  box-shadow: 0 14px 34px -16px #000; }
+.cta.sticky { position: sticky; bottom: 14px; z-index: 20; }
+
+input:focus { outline: none; border-color: #E7B94A !important; }
+button:focus-visible, input:focus-visible { outline: 2px solid #E7B94A; outline-offset: 2px; }
+
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: #26392F; border-radius: 6px; }
